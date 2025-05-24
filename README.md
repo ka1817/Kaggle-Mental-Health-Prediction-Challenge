@@ -15,6 +15,3 @@ The goal of this challenge is to build a machine learning model that can accurat
 - Submission generation for Kaggle
 
 ---
-
-## 📂 Project Structure
-
