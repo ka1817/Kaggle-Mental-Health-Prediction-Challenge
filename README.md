@@ -6,7 +6,7 @@ Welcome to the repository for the **Mental Health Prediction Challenge**, a Kagg
 
 ## 📘 Overview
 
-The goal of this challenge is to build a machine learning model that can accurately predict whether an individual is likely to experience **depression**. This project involves:
+The goal of this challenge is to build a machine learning model that can accurately predict whether individual is likely to experience **depression**. This project involves:
 
 - Exploratory data analysis (EDA)
 - Data preprocessing
