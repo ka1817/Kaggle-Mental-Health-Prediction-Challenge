@@ -8,8 +8,6 @@ def data_ingestion():
 
     test_path = os.path.join(base_dir, "data", "test.csv")
     df_test = pd.read_csv(test_path)
-    submission_path=os.path.join(base_dir, "data", "sample_submission.csv")
-    df_target=pd.read_csv(submission_path)
-    print(df_train.shape)
-    return df_train,df_test,df_target
-data_ingestion()
+    return df_train,df_test
+if __name__=='__main__':
+    data_ingestion()
