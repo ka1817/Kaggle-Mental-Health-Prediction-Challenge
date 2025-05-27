@@ -2,7 +2,7 @@ import pandas as pd
 import os
 
 def data_ingestion():
-    # Get the base directory where the script is located
+   
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
     train_path = os.path.join(base_dir, "data", "train.csv")

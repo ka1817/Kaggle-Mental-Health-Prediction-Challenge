@@ -1,4 +1,3 @@
-# src/model_building.py
 import os
 import joblib
 import pandas as pd
@@ -20,15 +19,15 @@ mlflow.set_experiment("Depression_Prediction_Models1")
 def train_and_log_models():
     df_train, df_test = data_preprocessing()
 
-    # Split features and target
+    
     X_train = df_train.drop('Depression', axis=1)
     y_train = df_train['Depression']
     X_test = df_test.copy()
 
-    # Get preprocessor
+    
     preprocessor = get_preprocessor()
 
-    # Define models with parameter grids for tuning
+    
     models = {
         'lr': {
             'model': LogisticRegression(max_iter=1000),
@@ -63,7 +62,7 @@ def train_and_log_models():
     model_dir = os.path.abspath(os.path.join(os.getcwd(), "..", "models"))
     os.makedirs(model_dir, exist_ok=True)
 
-    # Train and log each model with MLflow
+   
     for name, config in models.items():
         with mlflow.start_run(run_name=name):
             pipeline = Pipeline([
@@ -79,7 +78,7 @@ def train_and_log_models():
 
             mlflow.log_params(grid.best_params_)
 
-            # Save best model locally without MLflow metadata
+            
             model_name = model_filename_map[name]
             model_path = os.path.join(model_dir, f"{model_name}.pkl")
             joblib.dump(grid.best_estimator_, model_path)

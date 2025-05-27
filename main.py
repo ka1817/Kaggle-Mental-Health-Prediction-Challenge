@@ -9,17 +9,13 @@ import uvicorn
 
 app = FastAPI()
 
-# Mount static directory
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
-# Jinja templates
 templates = Jinja2Templates(directory="templates")
 
-# Load model (SVC)
 model_path = os.path.join("models", "SVC.pkl")
 model = joblib.load(model_path)
 
-# Feature order expected by the model
 FEATURES = [
     "Gender", "Age", "Academic Pressure", "Study Satisfaction", "Sleep Duration",
     "Dietary Habits", "Have you ever had suicidal thoughts ?", "Study Hours",
@@ -44,7 +40,7 @@ async def predict(
     Financial_Stress: int = Form(...),
     Family_History: str = Form(...)
 ):
-    # Construct a DataFrame with correct column names
+    
     input_data = pd.DataFrame([[
         Gender, Age, Academic_Pressure, Study_Satisfaction, Sleep_Duration,
         Dietary_Habits, Suicidal_Thoughts, Study_Hours, Financial_Stress, Family_History
