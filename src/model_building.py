@@ -8,7 +8,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.svm import SVC
 from sklearn.model_selection import GridSearchCV
-from data_preprocessing import data_preprocessing, get_preprocessor
+from src.data_preprocessing import data_preprocessing, get_preprocessor
 
 mlflow.set_tracking_uri("http://127.0.0.1:5000")
 mlflow.set_experiment("Depression_Prediction_Models1")

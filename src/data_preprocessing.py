@@ -2,7 +2,7 @@
 import pandas as pd
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OrdinalEncoder, OneHotEncoder, StandardScaler
-from data_ingestion import data_ingestion
+from src.data_ingestion import data_ingestion
 
 def data_preprocessing():
     df_train, df_test = data_ingestion()
