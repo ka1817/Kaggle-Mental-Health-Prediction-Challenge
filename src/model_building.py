@@ -8,7 +8,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.svm import SVC
 from sklearn.model_selection import GridSearchCV
-from src.data_preprocessing import data_preprocessing, get_preprocessor
+from data_preprocessing import data_preprocessing, get_preprocessor
 import sys
 import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
