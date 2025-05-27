@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/526767053096619665/86d4f0a5b4bb4512bb2a8f78098be484/artifacts
+end_time: 1748324283480
+entry_point_name: ''
+experiment_id: '526767053096619665'
+lifecycle_stage: active
+run_id: 86d4f0a5b4bb4512bb2a8f78098be484
+run_name: dt
+run_uuid: 86d4f0a5b4bb4512bb2a8f78098be484
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748324279891
+status: 3
+tags: []
+user_id: saipr
